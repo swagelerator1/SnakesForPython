@@ -8,7 +8,8 @@ LEFT = 3
 direction = RIGHT
 
 # The size of a single block
-blockSize = 20
+blockSize = 2
 # The maximum number of blocks on each side.
-xBound = 30
-yBound = 30
+xBound = 400
+
+yBound = 400

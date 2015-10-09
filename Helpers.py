@@ -46,10 +46,11 @@ def printRect(text, rect):
     print text + " Top-left: (" + str(rect.left) + ", " + str(oldPiece.top) + ")"
 
 # Code for if snake runs into itself or game exits.
-def quitGame():
-    print "Game over!"
+def quitGame(score):
+    print " yu failed!"
     # How can we measure the player's score?
     print "Your score is: "
+    print score
     sys.exit(0)
 
 # Code to move the head.
@@ -85,11 +86,11 @@ def randomRect():
     return Rect(randint(1, xBound - 2) * blockSize, randint(1, yBound - 2) * blockSize, blockSize, blockSize)
 
 # Draw the screen depending on what happens.
-def draw(oldPiece, head, body, appleRect, hasEaten, screen):
+def draw(oldPiece, head, body, appleRect, hasEaten, apple, appple, screen):
 
 
     # Draw the head.
-    pygame.draw.rect(screen, (0, 255, 0), head)
+    pygame.draw.rect(screen, (201, 176, 17), head)
     # Draw the body.
     for block in body:
         pygame.draw.rect(screen, (0, 155, 0), block)
@@ -100,6 +101,8 @@ def draw(oldPiece, head, body, appleRect, hasEaten, screen):
 
     # Draw the apple.
     pygame.draw.rect(screen, (255, 0, 0), appleRect)
+    pygame.draw.rect(screen, (255, 0, 0), apple)
+    pygame.draw.rect(screen, (255, 0, 0), appple)
 
 
 
